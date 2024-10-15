@@ -1,0 +1,64 @@
+
+
+.NavBar {
+    height: 15vh; /* Reduce height to prevent content overflow */
+    padding: 0 20px; /* Padding horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.nav_name img{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+.nav_name h1{
+    margin: 0;
+    font-size: 24px;
+
+}
+.nav_name h5{
+    margin: 0;
+    font-size: 16px;
+  font-weight: normal;
+}
+.nav_list ul {
+    list-style: none;       
+    display: flex;      
+    margin: 0;
+    padding: 0;
+   
+   
+  }
+
+ 
+
+  .nav_list ul li {
+    margin-left: 20px;       
+    cursor: pointer;         
+    font-size: 16px;
+    text-transform: uppercase; 
+
+ 
+  }
+ .navlink{
+     text-decoration: none;
+ }
+
+  .nav_list ul li:hover {
+    color: #0076ff;          
+    transition: color 0.3s ease;
+  }
+
+  .active-link{
+      color: #0076ff ;
+      font-weight: bold;
+  }
