@@ -1,9 +1,13 @@
 import React from "react"
+import "./About.css"
 
 const About=()=>{
     return(
-        <>
-        <h1>xczxczczcv</h1></>
+     <>
+     <div className="about">
+        zxcvbnm,
+     </div>
+     </>
     )
 }
 

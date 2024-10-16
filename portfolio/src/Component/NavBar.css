@@ -14,10 +14,13 @@
   box-sizing: border-box;
 }
 
+
+
 .nav_name img {
   display: inline-block;
   height: 20px;
   width: 20px;
+  margin-right: 10px; /* Space between image and text */
 }
 
 .nav_name h1 {
@@ -31,15 +34,63 @@
   font-weight: normal;
 }
 
-.nav_list ul {
-  list-style: none;
+.nav_list {
+  display: flex; /* Use flexbox for the nav list */
+  align-items: center; /* Center items vertically */
+  margin-left: auto; /* Push nav list to the left */
+}
 
+.nav_list_ul  {
+  list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
+.hamb_menu_ul{
+list-style: none;
+margin: 0;
+padding: 0;
+/* position: relative;
+top: 12px; */
+}
 
-.nav_list ul li {
+.hamb_menu_ul li{
+  padding: 10px;
+cursor: pointer;
+
+
+}
+
+.hamburg {
+  display: none; /* Initially hidden */
+  height: 45px;
+  margin-left: auto; /* Push to the right corner */
+
+}
+
+.hamb_menu{
+  display: none;
+  height: 30vh;
+  width: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f4ece6;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  position: relative;
+ 
+
+}
+
+.close_icon{
+display: none;
+position: absolute;
+right: 10px;
+}
+
+.nav_list_ul li {
   margin-left: 20px;
   cursor: pointer;
   font-size: 16px;
@@ -51,7 +102,7 @@
   color: black;
 }
 
-.nav_list ul li:hover {
+.nav_list_ul li:hover {
   transition: color 0.3s ease;
 }
 
@@ -61,13 +112,13 @@
 }
 
 /* Large screens (above 786px) */
-@media (min-width: 786px) and (max-width: 1024px)  {
+@media (min-width: 786px) and (max-width: 1024px) {
   .NavBar {
       height: 10vh;
       padding: 0 40px; /* Increase padding for larger screens */
   }
 
-  .nav_list ul li {
+  .nav_list_ul li {
       font-size: 18px;
   }
 }
@@ -87,11 +138,11 @@
       font-size: 14px;
   }
 
-  .nav_list ul {
+  .nav_list_ul {
       flex-direction: row; /* Keep horizontal layout for tablets */
   }
 
-  .nav_list ul li {
+  .nav_list_ul li {
       margin-left: 15px;
       font-size: 14px; /* Smaller font size for tablet screens */
   }
@@ -99,9 +150,20 @@
 
 /* Mobile screens (max-width: 480px) */
 @media (max-width: 480px) {
+  .hamburg {
+      display: inline; /* Show hamburger icon on mobile */
+      display: inline;
+        position: relative;
+        bottom: 40px;
+        height: 40px;
+  }
+  .hamb_menu{
+    display: block;
+  }
+ 
   .NavBar {
-      height: auto; /* Let height adjust based on content */
-      padding:  10px;
+      height: 15vh; /* Let height adjust based on content */
+      padding: 10px;
       flex-direction: column; /* Stack items vertically */
       align-items: flex-start; /* Align items to the left */
   }
@@ -113,16 +175,12 @@
   .nav_name h5 {
       font-size: 12px;
   }
-  .nav_list{
-    display: none;
+
+  .nav_list_ul {
+      display: none; 
   }
 
-  .nav_list ul {
-      flex-direction: column; /* Stack nav items vertically */
-      width: 100%;
-  }
-
-  .nav_list ul li {
+  .nav_list_ul li {
       margin: 10px 0; /* Add margin vertically between items */
       font-size: 14px; /* Smaller font size for mobile */
   }
@@ -130,5 +188,12 @@
   .navlink {
       width: 100%;
       text-align: left; /* Align links to the left on mobile */
+  }
+  .close_icon{
+    display: block;
+  }
+  .close_icon img{
+
+height: 15px;
   }
 }
