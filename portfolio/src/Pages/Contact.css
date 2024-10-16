@@ -1,8 +1,162 @@
-.contact{
+.contact {
     background-color: #e6dace;
     padding: 20px;
-    padding-top: 20vh;
+    /* padding-top: 20vh; */
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle_contact {
+    background-color: rgb(0 80 255);
+    display: inline-block;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+}
+
+.contact_name {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.contact_form {
+    background-color: white;
+    padding: 50px 40px;
+    width: 40%;                 
+    display: flex;
+    flex-direction: column;           
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;                  
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;     
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: rgb(0 80 255);
+}
+
+.email, .subject, .message {
+    width: 100%;
+    padding-top: 6px;
+}
+
+.message label {
+    display: block;
+}
+
+.message textarea {
+    height: 100px;
+}
+
+.btn {
+    padding-top: 20px;
+}
+
+.btn button {
+    padding: 10px;
+    width: 200px;
+    background-color: rgb(0 80 255);
+    color: white;
+    font-weight: 800;
+    border: none;
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn button:hover {
+    background-color: rgb(0 60 200);
+}
+
+.btn button:active {
+    background-color: green;
+    transform: scale(0.95);
+}
 
 
+
+@media (min-width: 786px) and (max-width: 1024px)  {
+    .contact_form {
+        width: 60%;
+        padding: 70px 50px;
+    
+    }
+
+    .btn button {
+        width: 250px; /* Wider button for larger screens */
+    }
+
+    .name {
+        gap: 20px; /* Add space between first and last name */
+    }
+}
+/* Tablet Screens (481px - 786px) */
+@media (min-width: 481px) and (max-width: 786px) {
+    .contact_form {
+        width: 80%; 
+        padding: 30px;
+    }
+
+    .name {
+        display: block; /* Stack first and last name vertically */
+    }
+
+    .first_name, .last_name {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .contact {
+
+        padding-top: 10vh;
+        height: 100vh;
+      
+    }
+    .contact_form {
+        width: 85%; /* Full width for mobile screens */
+        padding: 20px;
+    }
+
+    .name {
+        display: block;
+    }
+
+    .first_name, .last_name {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    input, textarea, button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn button {
+        width: 100%;
+    }
 }

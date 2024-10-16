@@ -1,64 +1,134 @@
-
-
 .NavBar {
-    height: 15vh; /* Reduce height to prevent content overflow */
-    padding: 0 20px; /* Padding horizontally */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: white;
-    width: 100%;
-    z-index: 1000; /* Ensure it stays on top */
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  height: 15vh;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
-.nav_name img{
-    display: inline-block;
-    height: 20px;
-    width: 20px;
+.nav_name img {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
 }
-.nav_name h1{
-    margin: 0;
-    font-size: 24px;
 
+.nav_name h1 {
+  margin: 0;
+  font-size: 24px;
 }
-.nav_name h5{
-    margin: 0;
-    font-size: 16px;
+
+.nav_name h5 {
+  margin: 0;
+  font-size: 16px;
   font-weight: normal;
 }
-.nav_list ul {
-    list-style: none;       
-    display: flex;      
-    margin: 0;
-    padding: 0;
-   
-   
-  }
 
- 
+.nav_list ul {
+  list-style: none;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_list ul li {
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.navlink {
+  text-decoration: none;
+  color: black;
+}
+
+.nav_list ul li:hover {
+  transition: color 0.3s ease;
+}
+
+.active-link {
+  color: #0076ff;
+  font-weight: bold;
+}
+
+/* Large screens (above 786px) */
+@media (min-width: 786px) and (max-width: 1024px)  {
+  .NavBar {
+      height: 10vh;
+      padding: 0 40px; /* Increase padding for larger screens */
+  }
 
   .nav_list ul li {
-    margin-left: 20px;       
-    cursor: pointer;         
-    font-size: 16px;
-    text-transform: uppercase; 
-
- 
+      font-size: 18px;
   }
- .navlink{
-     text-decoration: none;
- }
+}
 
-  .nav_list ul li:hover {
-    color: #0076ff;          
-    transition: color 0.3s ease;
+/* Tablet screens (481px - 786px) */
+@media (min-width: 481px) and (max-width: 786px) {
+  .NavBar {
+      height: 12vh;
+      padding: 0 30px;
   }
 
-  .active-link{
-      color: #0076ff ;
-      font-weight: bold;
+  .nav_name h1 {
+      font-size: 20px; /* Reduce font size */
   }
+
+  .nav_name h5 {
+      font-size: 14px;
+  }
+
+  .nav_list ul {
+      flex-direction: row; /* Keep horizontal layout for tablets */
+  }
+
+  .nav_list ul li {
+      margin-left: 15px;
+      font-size: 14px; /* Smaller font size for tablet screens */
+  }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .NavBar {
+      height: auto; /* Let height adjust based on content */
+      padding:  10px;
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align items to the left */
+  }
+
+  .nav_name h1 {
+      font-size: 18px; /* Further reduce the font size */
+  }
+
+  .nav_name h5 {
+      font-size: 12px;
+  }
+  .nav_list{
+    display: none;
+  }
+
+  .nav_list ul {
+      flex-direction: column; /* Stack nav items vertically */
+      width: 100%;
+  }
+
+  .nav_list ul li {
+      margin: 10px 0; /* Add margin vertically between items */
+      font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .navlink {
+      width: 100%;
+      text-align: left; /* Align links to the left on mobile */
+  }
+}
