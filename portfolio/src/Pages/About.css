@@ -1,8 +1,249 @@
-.about{
-    background-color: red;
+.about {
+    background: linear-gradient(to right, #e6dace 40%, white 40%);
     padding: 20px;
     padding-top: 20vh;
     height: 100vh;
+    margin: 0;
+  }
+  
+  .about_container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 0 auto; /* Center the about_container */
+  }
+  
+  .container_1 {
+    width: 30%;
+    /* border: 1px solid #ccc; */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 30px 10px;
+    background-color: rgb(244, 236, 230);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .profile_container {
+    text-align: center;
+  }
+  
+  .profile_container img {
+    height: 220px;
+    border-radius: 50%;
+  }
+  
+  .container_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .container_name h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    top: 20px; /* Adjust the position of the text */
+  }
+  
+  .border {
+    width: 80%; /* Adjusted width of the border */
+    border-bottom: 2px solid #ccc;
+    margin-top: 10px; /* Space between text and border */
+    text-align: center;
+  }
+  
+  .container_profession p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    top: 10px; /* Adjust the spacing between the profession and the border */
+  }
+  
+  .follws_container {
+    background-color: white;
+    padding: 10px; /* Add padding to the follows container */
+    margin: 0;
+    position: relative;
+    width: 100%; /* Ensure the container takes full width */
+    bottom: -30px; /* Position it at the bottom of the container */
+    text-align: center;
+  }
 
-
+  .follws_container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
+.follws_container img{
+height: 20px;
+width: 20px;
+cursor: pointer;
+}
+  
+/* .container_2{
+    width: 30%;
+    
+    padding: 30px 10px;
+ 
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container2_intro h1{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+.container2_intro h5{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+} */
+
+
+.container_2 {
+    width: 30%;
+    padding: 30px 10px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+     justify-content: flex-start; 
+        align-items: center;
+ 
+  }
+  
+  .container2_intro {
+    margin-bottom: 20px;
+  }
+  
+  .container2_intro h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+  }
+  
+  .container2_intro h5 {
+    margin: 10px 0; /* Space between the h1 and h5 */
+    padding: 0;
+    font-size: 18px;
+  }
+  
+  .container2_btn {
+    margin-top: 10px; /* Add space between intro and buttons */
+    display: flex;
+  }
+  
+  .container2_btn button {
+    margin: 5px; /* Space between the buttons */
+    padding: 8px 30px; /* Adjust padding for button size */
+    font-size: 16px;
+    cursor: pointer;
+    /* border: none; */
+    border-radius: 20px;
+  }
+  
+  .resume_btn{
+      background-color: blue;
+      color: white;
+      border: none;
+  }
+  .container2_btn button:active{
+      background-color: green;
+  }
+  .resume_btn:hover{
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+  }
+  .skill_btn{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+  .skill_btn:hover{
+      background-color: blue;
+      color: white;
+      border: none;
+  }
+
+  @media(max-width:480px){
+      .about{
+          height: 100vh;
+          overflow-y: auto;
+      }
+      .about_container{
+          
+          flex-direction: column;
+          padding: 0;
+    }
+    .container_1{
+width: 100%;
+height: auto;
+    }
+    .container_2 {
+       width: 100%;
+       padding: 0;
+      
+    }
+    .container2_btn  {
+       margin-top: 0;
+    }
+    .container2_intro{
+margin-bottom: 0;
+    }
+
+    .container_name h2 {
+    top: 0;
+    }
+
+ 
+  }
+
+  @media (min-width: 481px) and (max-width: 786px) {
+
+.about{
+   height: auto;
+
+  
+}
+.about_container{
+    width: 90vw;
+ padding: 0px;
+}
+.container_1{
+    width: 45%;
+}
+.container_2{
+    width: 45%;
+}
+  }
+
+  @media(min-width:787px ) and (max-width:1024px){
+      .about{
+          height: auto;
+     
+      }
+      .about_container{
+          width: 80vw;
+      }
+      .container_1{
+          width: 50%;
+          height: 40vh;
+      }
+      .container_2{
+          width: 50%;
+          justify-content: center;
+      }
+  }

@@ -56,7 +56,7 @@ cursor: pointer;
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .footer {
-        flex-direction: column;    /* Stack content vertically on smaller screens */
+        flex-direction:column-reverse;    /* Stack content vertically on smaller screens */
         text-align: center;        /* Center content */
     }
 
@@ -64,3 +64,5 @@ cursor: pointer;
         margin-bottom: 15px;
     }
 }
+
+

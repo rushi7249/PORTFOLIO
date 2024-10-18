@@ -8,7 +8,7 @@ import close from "../Imges/close.png"
 const NavBar = () => {
 const [isMenuOpen,setIsMenuOpen]=React.useState(false)
   const handledhamburg=()=>{
-console.log("click")
+
 setIsMenuOpen((prev)=>!prev)
   }
   const handleMenuItemClick = () => {
