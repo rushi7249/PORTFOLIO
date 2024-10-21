@@ -1,0 +1,209 @@
+.skill {
+    background: #e6dace;
+    padding: 20px;
+    padding-top: 20vh;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .skill_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .skill h3 {
+    text-align: center;
+    display: block;
+    margin: 0;
+    font-size: 40px;
+    padding-bottom: 50px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .skill_card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; 
+}
+  
+  .skill_card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .skill_card:hover .skill_card-inner {
+    transform: rotateX(180deg); /* Rotate the card on hover to show back */
+  }
+  
+  .skill_card-front,
+  .skill_card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .skill_card-front {
+    background-color: honeydew;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .skill_card-back {
+    background-color: lightcoral;
+    transform: rotateX(180deg); /* Rotate back to match the flip */
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .css img,
+  .html img,
+  .js img,
+  .react img,
+  .node img,
+  .ex img,
+  .mongo img {
+    height: 40px;
+    text-align: center;
+  }
+  
+  .css h6,
+  .html h6,
+  .js h6,
+  .react h6,
+  .node h6,
+  .ex h6,
+  .mongo h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+  
+
+   .skill_card-back img{
+  height: 100%;
+  width: 100%;
+border-radius: 10px;
+  } 
+
+  .certification{
+   
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+  
+  }
+  
+  .card h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .card ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #555;
+  }
+  
+@media (min-width:787px) and (max-width:1024px){
+  .skill_container{
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 50px;
+    margin: 0 auto;
+
+  }
+}
+
+  @media(min-width:481px) and (max-width:786px){
+    .skill_container {
+      flex-direction: column;
+      gap:70px
+    }
+    .skill_card{
+      width: 350px;
+      height: 250px;
+    }
+    .skill{
+      overflow-y: auto;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skill_container {
+      flex-direction: column;
+      gap:10px
+    }
+    .skill_card-front{
+        padding: 0;
+    }
+    .skill{
+        overflow-y: auto;
+    }
+    .card{
+     
+      max-width: 200px;
+    
+      margin-top: 20px;
+  
+    }
+    .main_section_div2, .main_section_div1 {
+      padding: 5px;
+  }
+
+  .content_div2 {
+      padding: 10px;
+  }
+
+  .add-to-cart-btn {
+      font-size: 0.85em; /* Slightly smaller buttons on extra small screens */
+  }
+
+  .services-info p {
+      font-size: 0.8em; /* Reduce text size on small devices */
+  }
+
+  .table {
+      font-size: 0.8em; /* Smaller table font size */
+  }
+
+  .service-list {
+      padding: 5px 0;
+  }
+  }
+
+
+  
