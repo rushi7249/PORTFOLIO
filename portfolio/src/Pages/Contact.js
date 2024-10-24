@@ -9,6 +9,8 @@ const Contact = () => {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    // const [required ,setRequired]=useState(false)
 
     // Handle change for all fields
     const handleChange = (e) => {
@@ -39,6 +41,7 @@ const Contact = () => {
 const hnadleSubmit=(e)=>{
     e.preventDefault();
 
+    // setRequired(!required)
     const templateParams = {
         from_name: `${fname} ${lname}`, // Combine first and last name
         from_email: email,
@@ -59,7 +62,10 @@ const hnadleSubmit=(e)=>{
     .catch((error) => {
         console.error('Error sending email:', error);
     });
-
+ setTimeout(()=>{
+    setIsSubmitted(false);
+ },2000)
+ setIsSubmitted(true);
 
 }
     return (
@@ -78,6 +84,7 @@ const hnadleSubmit=(e)=>{
                                 name="fname"         // Add name attribute
                                 value={fname} 
                                 onChange={handleChange} 
+                               required
                             />
                         </div>
                         <div className="last_name">
@@ -87,6 +94,7 @@ const hnadleSubmit=(e)=>{
                                 name="lname"         // Add name attribute
                                 value={lname} 
                                 onChange={handleChange} 
+                                required
                             />
                         </div>
                     </div>
@@ -97,6 +105,7 @@ const hnadleSubmit=(e)=>{
                             name="email"         // Add name attribute
                             value={email} 
                             onChange={handleChange} 
+                            required
                         />
                     </div>
                     <div className="subject">
@@ -106,6 +115,7 @@ const hnadleSubmit=(e)=>{
                             name="subject"       // Add name attribute
                             value={subject} 
                             onChange={handleChange} 
+                            required
                         />
                     </div>
                     <div className="message">
@@ -114,6 +124,7 @@ const hnadleSubmit=(e)=>{
                             name="message"        // Add name attribute
                             value={message} 
                             onChange={handleChange} 
+                            required
                         />
                     </div>
                     <div className="btn">
@@ -121,6 +132,10 @@ const hnadleSubmit=(e)=>{
                     </div>
                
                 </form>
+
+                {isSubmitted && ( // Conditionally rendering the success message
+        <p className="success-message">Successfully Submitted!</p>
+      )}
                 
             </div>
         </>

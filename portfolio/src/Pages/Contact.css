@@ -99,7 +99,12 @@ input:focus, textarea:focus {
     transform: scale(0.95);
 }
 
-
+.success-message{
+    color: green;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
 
 @media (min-width: 786px) and (max-width: 1024px)  {
     .contact_form {
