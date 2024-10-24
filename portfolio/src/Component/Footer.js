@@ -22,12 +22,12 @@ const Footer=()=>{
 <h5>follow</h5>
 <div className="folow_logo">
     <a href="https://www.instagram.com/yes_i_am_rushi/profilecard/?igsh=YjluamxocGRwMTFm" target="_blank">
-    <img src={instagram} alt="instagram"/>
+    <img className="insatgram" src={instagram} alt="instagram"/>
 
     </a>
     <a href="https://www.linkedin.com/in/rushikesh-chavhan-b084461b0" target="_blank">
 
-    <img src={message} alt="linkden" />
+    <img className="linkdin_message" src={message} alt="linkden" />
 
     </a>
 </div>

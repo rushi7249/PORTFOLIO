@@ -38,7 +38,10 @@ const Skill = () => {
 
                             </div>
                             <div onClick={() => {
-  window.open("https://66ec3971558e39cf1a2926eb--helpful-kelpie-b9d56e.netlify.app/" , "_blank");
+                                const userConfirmed = window.confirm("If you are using a desktop, then open it on the desktop; otherwise, it's okay.");
+                                if (userConfirmed) {
+  window.open("https://flourishing-scone-92c8bb.netlify.app/" , "_blank");
+                                }
 }} className="skill_card-back">
                                 <img src={css_html} />
                             </div>
@@ -61,7 +64,10 @@ const Skill = () => {
                                 </div>
                             </div>
                             <div onClick={() => {
-  window.open("https://66f8e42a140decc4349bd077--legendary-zabaione-0962bf.netlify.app/", "_blank");
+                                  const userConfirmed = window.confirm("If you are using a desktop, then open it on the desktop; otherwise, it's okay.");
+                                  if (userConfirmed) {
+  window.open("https://sensational-meerkat-2b56c7.netlify.app/", "_blank");
+                                  }
 }} className="skill_card-back">
                                 <img src={js_project} />
                             </div>
@@ -84,7 +90,10 @@ const Skill = () => {
                                 </div></div>
                                
                                 <div onClick={() => {
+                                      const userConfirmed = window.confirm("If you are using a desktop, then open it on the desktop; otherwise, it's okay.");
+                                      if (userConfirmed) {
   window.open("https://statuesque-tarsier-18f545.netlify.app/", "_blank");
+                                      }
 }} className="skill_card-back">
                                 <img src={js_react} />
                             </div>
